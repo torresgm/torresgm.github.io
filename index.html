@@ -1,0 +1,117 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <title>PhotoEdits</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/editPage.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="js/filter.js"></script>
+  <script src="js/orientation.js"></script>
+  <script src="js/download.js"></script>
+  <script src="js/editPage.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo">
+      <img src="images/logo.png" />
+    </div>
+    <div class="name">PhotoEdits</div>
+    <div id="menubutton">
+      <a href="#" id="menulink">&#9776;</a>
+    </div>
+    <div id="menu" class="hide">
+      <div class="menuitem"><a href="#" id="home">Home</a></div>
+      <div class="menuitem"><a href="#" id="about">About</a></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="content">
+    <div id="homePage" class="show">
+      <h2 class="pageTitle">PhotoEdits</h2>
+      <div id="homeLogo">
+        <img src="images/logo.png" />
+      </div>
+      <p class="buttonContainer"><button id="edit" class="button">Start Editing</button></p>
+    </div>
+
+    <div id="editPage" class="hide">
+      <div id="settings">
+        <div id="filterRanges">
+          <span><span>Blur</span><input id="blur" type="range" min="0" max="100" step="1" value="50" />
+          <span id="blurRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Brigthness</span><input id="brightness" type="range" min="0" max="100" step="1" value="50" />
+          <span id="brightnessRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Contrast</span><input id="contrast" type="range" min="0" max="100" step="1" value="50" />
+          <span id="contrastRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Grayscale</span><input id="grayscale" type="range" min="0" max="100" step="1" value="50" />
+          <span id="grayscaleRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Hue-Rotate</span><input id="hue-rotate" type="range" min="0" max="100" step="1" value="50" />
+          <span id="hue-rotateRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Invert</span><input id="invert" type="range" min="0" max="100" step="1" value="50" />
+          <span id="invertRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Opacity</span><input id="opacity" type="range" min="0" max="100" step="1" value="50" />
+          <span id="opacityRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Saturate</span><input id="saturate" type="range" min="0" max="100" step="1" value="50" />
+          <span id="saturateRangeValue" class="rangeValue">50</span>%</span>
+          <span><span>Sepia</span><input id="sepia" type="range" min="0" max="100" step="1" value="50" />
+          <span id="sepiaRangeValue" class="rangeValue">50</span>%</span>
+        </div>
+        <div id="orientationButtons">
+          <button id="flipHorizontal" title="flip horizontally"></button>
+          <button id="flipVertical" title="flip vertically"></button>
+          <br/>
+          <button id="rotateLeft" title="rotate to left"></button>
+          <button id="rotateRight" title="rotate to right"></button>
+        </div>
+      </div>
+      <div id="editContent">
+        <div id="imageContainer">
+          <canvas id="canvas"></canvas>
+        </div>
+        <div id="editButtons">
+          <div>
+            <label class="fileContainer">
+          <input class="button inputfile" type="file" id="imageFile" accept="image/*" />
+          Choose a file
+          </label>
+          </div>
+          <div class="buttonContainer">
+            <button class="button" id="resetImage">Reset to original image</button>
+          </div>
+          <div id="imageFormatRadios">
+            <span>Formats:</span>
+            <input type="radio" name="imageFormat" id="red" value="jpeg">jpeg
+            <input type="radio" name="imageFormat" id="blue" value="png">png
+          </div>
+          <div class="buttonContainer">
+            <a id="download" class="button">Download</a>
+          </div>
+        </div>
+      </div>
+      <div id="originalImageDisplay" class="button" title="See original image">
+        <img id="originalImage" />
+      </div>
+    </div>
+
+    <div id="aboutPage" class="hide">
+      <h2 class="pageTitle">ABOUT</h2>
+      <p>
+        <span class="name">PhotoEdits</span> is a simple image editor, which allows you to open an image and style them,
+        your way.
+      </p>
+      <p>Edit photos by setting filters and its orientation.</p>
+      <p>You can start editing your photos now by going to the home page.</p>
+      <p>Enjoy and create social media worthy photos!</p>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>&#169; PhotoEdits <span id="date"></span></p>
+  </div>
+</body>
+
+</html>

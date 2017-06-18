@@ -1,0 +1,208 @@
+body {
+  margin: 0px;
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  font-family: palatino linotype, palatino, serif;
+}
+
+.center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+input, button {
+  outline: none;
+}
+
+#header {
+  background: rgba(95, 12, 12, 0.79);
+  color: white;
+  font-size: 16px;
+  padding: 16px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  -webkit-box-shadow: 0px 6px 23px 4px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 0px 6px 23px 4px rgba(0, 0, 0, 0.71);
+  box-shadow: 0px 6px 23px 4px rgba(0, 0, 0, 0.71);
+}
+
+.name {
+  display: inline-block;
+  font-weight: bold;
+}
+
+#logo {
+  display: inline-block;
+}
+
+#logo img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+#menu, #menubutton {
+  margin: 8px 30px;
+}
+
+#menu a, #menubutton a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#aboutPage {
+  color: white;
+  font-size: 20px;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+}
+
+#aboutPage .name {
+  font-size: 20px;
+}
+
+#content {
+  margin: 100px 20px 50px 20px;
+  text-align: center;
+}
+
+.pageTitle {
+  text-shadow: 0px 0px 2px rgba(165, 173, 184, 1);
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  letter-spacing: 4pt;
+  word-spacing: 4pt;
+  font-size: 22px;
+}
+
+#content div, #imageFormatRadios, #resetImage, #filterRanges {
+  margin-top: 5px;
+}
+
+#footer {
+  position: fixed;
+  width: 100%;
+  height: 32px;
+  bottom: 0px;
+  background-color: rgba(107, 0, 0, 0.79);
+  -webkit-box-shadow: 0px -8px 23px 4px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: 0px -8px 23px 4px rgba(0, 0, 0, 0.71);
+  box-shadow: 0px -8px 23px 4px rgba(0, 0, 0, 0.71);
+}
+
+#footer>p {
+  text-align: center;
+  margin: 8px;
+  color: white;
+  font: bold 16px;
+}
+
+@media only screen and (min-width: 600px) {
+  #menu {
+    float: right;
+    display: inline;
+  }
+  .menuitem {
+    display: inline;
+  }
+  .menuitem+.menuitem {
+    border-left: 1px solid white;
+    margin-left: 8px;
+    padding-left: 8px;
+  }
+  #menubutton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #menubutton {
+    display: inline;
+    float: right;
+  }
+  #menu {
+    position: absolute;
+    top: 64px;
+    right: 0px;
+    background: rgba(95, 12, 12, 0.79);
+    padding: 16px;
+  }
+  .menuitem {
+    padding: 5px 5px 5px 5px;
+    display: block;
+  }
+  .menuitem:hover {
+    text-shadow: 4px 2px 2px rgba(150, 150, 148, 1);
+  }
+  .menuitem+.menuitem {
+    margin-top: 8px;
+  }
+  #originalImageDisplay img {
+    width: 150px;
+  }
+  #content {
+    margin: 100px;
+  }
+  #settings {
+    height: 30%;
+    width: 80%;
+    position: relative;
+    float: left;
+    top: -20px;
+    left: -40px;
+    transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    -o-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+  }
+  #orientationButtons br {
+    display: none;
+  }
+  #filterRanges > span {
+    display: inline-block;
+  }
+  #editButtons {
+    position: absolute;
+    top: 160px;
+    right: 0;
+    transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    -o-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+  }
+  #imageContainer {
+    position: absolute;
+    left: 20%;
+    top: 300px;
+    width: 315px;
+    height: 220px;
+  }
+  .imagePopupContent {
+    transform: scale(0.6, 0.6);
+    -ms-transform: scale(0.6, 0.6);
+    -webkit-transform: scale(0.6, 0.6);
+    -o-transform: scale(0.6, 0.6);
+    -moz-transform: scale(0.6, 0.6);
+  }
+}
